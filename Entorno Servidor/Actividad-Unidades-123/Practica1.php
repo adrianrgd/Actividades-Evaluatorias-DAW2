@@ -41,7 +41,24 @@ enum TipoReparacion: string
         };
     }
 }
-;
+
+// Definición de la función tipada
+function calcularPresupuestoTotal(float $manoDeObra, float $recambios, float $iva = 0.21): float
+{
+    $subtotal = $manoDeObra + $recambios;
+    $totalConIva = $subtotal * (1 + $iva);
+
+    // Retornamos el total redondeado a 2 decimales para importes monetarios
+    return round($totalConIva, 2);
+}
+
+// Invocación pasando los parámetros explícitamente mediante sus nombres
+$totalPresupuesto = calcularPresupuestoTotal(
+    recambios: 45.50,
+    manoDeObra: 30.00
+);
+
+echo "Total con IVA (21%): " . $totalPresupuesto . " €";
 
 
 ?>
