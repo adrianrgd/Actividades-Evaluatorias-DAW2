@@ -5,6 +5,7 @@ body {
   background: #f8fafc;
   color: #1e293b;
 }
+
 .card {
   background: white;
   padding: 20px;
@@ -35,4 +36,49 @@ button {
   background: #356132;
   color: white;
   cursor: pointer;
+}
+
+/* Estilos para el listado de reseñas */
+#outReseñas {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.item-reseña {
+  background: #f1f5f9;
+  border-left: 4px solid #356132;
+  padding: 12px 15px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.reseña-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.reseña-pelicula {
+  font-size: 1.05rem;
+  color: #0f172a;
+}
+
+.reseña-opinion {
+  margin: 4px 0;
+  font-style: italic;
+  color: #334155;
+}
+
+.reseña-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.82rem;
+  color: #64748b;
+  border-top: 1px dashed #cbd5e1;
+  padding-top: 6px;
 }

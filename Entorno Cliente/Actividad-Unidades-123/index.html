@@ -1,27 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>CineVerse</title>
-</head>
-<body>
-  <h1>CineVerse</h1>
-  <div class="card">
-    <div id="info"></div>
-  </div>
-  <div class="card">
-      <input type="text" id="CorreoLimpio" placeholder="Introduce tu correo">
+  </head>
+  <body>
+    <h1>CineVerse</h1>
+    <div class="card">
+      <div id="info"></div>
+    </div>
+    <div class="card">
+      <input type="text" id="CorreoLimpio" placeholder="Introduce tu correo" />
       <button id="btnEnviarCorreo">Enviar</button>
       <div id="out-perfil"></div>
-  </div>
-  <div class="card">
-    <div id="info-perfil"></div>
-  </div>
-  <div class="card">
-    <div id="taquilla"></div>
-  </div>
-  <script src="app.js" defer></script>
-</body>
+    </div>
+    <div class="card">
+      <div id="info-perfil"></div>
+    </div>
+    <div class="card">
+      <div id="taquilla"></div>
+      <hr />
+      <div id="taquillaDesc">
+        <p>Introduce tu descuento en €:</p>
+        <input type="text" id="descuento" />
+        <button id="btnDescuento">Enviar</button>
+        <strong style="font-size: 12px">
+          ❗Si no hay descuento pulsa enviar sin rellenar
+        </strong>
+      </div>
+    </div>
+    <div class="card">
+      <button id="verRecibo">Ver Recibo</button>
+      <div id="recibo"></div>
+    </div>
+    <div class="card">
+      <div id="temporizadorDesc">
+        <button id="IniTemp">¡Activar Descuento Flash!</button>
+        <p>Oferta finaliza en <strong id="OutContador">20</strong> segundos.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div id="InputReseñas">
+        <input type="text" id="Pelicula" placeholder="Película" />
+        <input
+          type="number"
+          id="Puntuacion"
+          placeholder="⭐"
+          min="0"
+          max="10"
+        />
+        <input type="text" id="Opinion" placeholder="Opinión" />
+        <button id="btnEnviarReseña">Enviar</button>
+      </div>
+    </div>
+    <div class="card">
+      <div id="outReseñas">
+        <h2>Reseñas</h2>
+      </div>
+    </div>
+    <script src="app.js" defer></script>
+  </body>
 </html>
